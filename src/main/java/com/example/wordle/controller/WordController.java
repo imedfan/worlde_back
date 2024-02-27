@@ -26,19 +26,19 @@ public class WordController {
     private static final String GET_TODAY_WORD = BASE_PATH + "today";
 
 
-    @GetMapping(value = GET_WORD, produces = MediaType.APPLICATION_JSON_VALUE)
-    public WordDTO get(
-            @PathVariable Long id
-    ){
-        Word word = wordService.getWordById(id);
-        WordDTO wordDTO = new WordDTO(
-                word.getId(),
-                word.getCreate_date(),
-                word.getUse_date(),
-                word.getWord()
-        );
-        return wordDTO;
-    }
+//    @GetMapping(value = GET_WORD, produces = MediaType.APPLICATION_JSON_VALUE)
+//    public WordDTO get(
+//            @PathVariable Long id
+//    ){
+//        Word word = wordService.getWordById(id);
+//        WordDTO wordDTO = new WordDTO(
+//                word.getId(),
+//                word.getCreate_date(),
+//                word.getUse_date(),
+//                word.getWord()
+//        );
+//        return wordDTO;
+//    }
 
     @GetMapping(value = GET_TODAY_WORD, produces = MediaType.APPLICATION_JSON_VALUE)
     public WordDTO getToday(){
